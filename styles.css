@@ -46,6 +46,7 @@ body{
     transform: rotate(45deg); /* Rotar 45 grados */
     transition: all 0.2s ease; /* Transición suave */
     opacity: 0; /* Ocultar la oreja por defecto */
+
 }
 
 .intro::after {

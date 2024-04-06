@@ -1,5 +1,5 @@
 class Display{
-    constructor(displayValorActual, displayValorAnterior)
+    constructor(displayValorAnterior, displayValorActual)
     {
         this.displayValorActual = displayValorActual;
         this.displayValorAnterior = displayValorAnterior;
@@ -7,11 +7,17 @@ class Display{
         this.tipoOperacion = undefined;
         this.valorActual = '';
         this.valorAnterior = '';
+        this.signos = {
+            sumar: '+',
+            dividir: '/',
+            multiplicar: '*',
+            restar: '-'
+        };
     }
 
     agregarNumero(numero)
     {
-        if(numero == '.' && this.valorActual.includes('.'))
+        if(numero === '.' && this.valorActual.includes('.'))
         {
           return  
         }
@@ -22,7 +28,7 @@ class Display{
     mostrarValores()
     {
         this.displayValorActual.textContent = this.valorActual;
-        this.displayValorAnterior.textContent = this.valorAnterior;
+        this.displayValorAnterior.textContent = `${this.valorAnterior} ${this.signos[this.tipoOperacion] || ''}`;
     }
 
 
@@ -50,4 +56,15 @@ class Display{
         this.tipoOperacion = undefined;
         this.mostrarValores();
     }
+
+    computar(tipo)
+    {
+        this.tipoOperacion !== 'igual' && this.calcular();
+        this.tipoOperacion = tipo;
+        this.valorAnterior = this.valorActual || this.valorAnterior;
+        this.valorActual  = '';
+        this.mostrarValores();
+    }
+
+
 } 

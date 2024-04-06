@@ -16,5 +16,6 @@ numeros.forEach(boton =>{
 
 operadores.forEach(boton =>{
     boton.addEventListener('click', () => {
+        pantalla.computar(boton.value);
     })
 });
