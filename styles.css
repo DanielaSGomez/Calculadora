@@ -1,0 +1,131 @@
+*{
+    font-family: "Ojuju", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    
+}
+
+body{
+    background-color: #FFCDEA;
+    margin: 0;
+}
+
+.intro h1{
+    color: aliceblue;
+    position: relative;
+    z-index: 1;
+}
+
+.intro {
+    background-color: #BC7FCD;
+    margin: 10% auto;
+    width: min-content;
+    border-radius: 50%;
+    padding: 3%;
+    text-align: center;
+    position: relative;
+    box-shadow: 15px 10px 15px 5px #D6589F;
+}
+
+.intro::before,
+.intro::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.intro::before {
+    border-width: 30px 30px 0 0;
+    border-color: #BC7FCD transparent transparent transparent;
+    left: calc(50% - 45px); /* Posición en X para la oreja izquierda */
+    top: 0;
+    transform: rotate(45deg); /* Rotar 45 grados */
+    transition: all 0.2s ease; /* Transición suave */
+    opacity: 0; /* Ocultar la oreja por defecto */
+}
+
+.intro::after {
+    border-width: 30px 0 0 30px;
+    border-color: #BC7FCD transparent transparent transparent;
+    right: calc(50% - 45px); /* Posición en X para la oreja derecha */
+    top: 0;
+    transform: rotate(-45deg); /* Rotar -45 grados */
+    transition: all 0.2s ease; /* Transición suave */
+    opacity: 0; /* Ocultar la oreja por defecto */
+}
+
+.intro:hover::before,
+.intro:hover::after {
+    opacity: 1; /* Mostrar orejas al pasar el mouse sobre el círculo */
+}
+.pink_container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora_QT
+{
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #BC7FCD;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 15px 10px 15px 5px #D6589F;
+
+}
+
+button
+{
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #BC7FCD;
+    box-shadow: 5px 5px 10px -3px #8644A2, -1px -1px 3px 1px #FFCDEA ;
+}
+
+button:active
+{
+    background-color: #5E1675;
+}
+
+.col-2
+{
+    grid-column: span 2;
+}
+
+.pantalla
+{
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+#segundoNumero
+{
+    font-size: 1.5em;
+}
+
+#primerNumero
+{
+    font-size: 2em;
+}
