@@ -18,32 +18,36 @@
     <div class="intro">
         <h1>Nanai Calculator</h1>
     </div>
-    <div class="pink_container">
+    <div class="pics">
+        <img src="img/gato1.jpg" alt="Gato 1" style="display: none;">
+        <img src="img/gato2.jpg" alt="Gato 2" style="display: none;">
+        <img src="img/gato3.jpg" alt="Gato 3" style="display: none;">
+    </div>
+    <div class="pink_container">      
         <div class="calculadora_QT">
             <div class="pantalla">
                 <div id="valorActual"></div>
                 <div id="valorAnterior"></div>
             </div>
-                <button class="col-2" onclick="pantalla.limpiarPantalla()">C</button>
-                <button onclick="pantalla.borrarUltimo()">&larr;</button>
-                <button class="smoothOperator" value="dividir">/</button>
-                <button class="numerito">7</button>
-                <button class="numerito">8</button>
-                <button class="numerito">9</button>
-                <button class="smoothOperator" value="multiplicar">*</button>
-                <button class="numerito">4</button>
-                <button class="numerito">5</button>
-                <button class="numerito">6</button>
-                <button class="smoothOperator" value="restar">-</button>
-                <button class="numerito">1</button>
-                <button class="numerito">2</button>
-                <button class="numerito">3</button>
-                <button class="smoothOperator" value="sumar">+</button>
-                <button class="col-2 numerito">0</button>
-                <button class="numerito">.</button>
-                <button class="smoothOperator" value="igual">=</button>
+                <button class="col-2" onclick="pantalla.limpiarPantalla(), mostrarImagenRandom()">C</button>
+                <button onclick="pantalla.borrarUltimo(), mostrarImagenRandom()"">&larr;</button>
+                <button class="smoothOperator" value="dividir" onclick="mostrarImagenRandom()">/</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">7</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">8</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">9</button>
+                <button class="smoothOperator" value="multiplicar" onclick="mostrarImagenRandom()">*</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">4</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">5</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">6</button>
+                <button class="smoothOperator" value="restar" onclick="mostrarImagenRandom()">-</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">1</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">2</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">3</button>
+                <button class="smoothOperator" value="sumar" onclick="mostrarImagenRandom()">+</button>
+                <button class="col-2 numerito" onclick="mostrarImagenRandom()">0</button>
+                <button class="numerito" onclick="mostrarImagenRandom()">.</button>
+                <button class="smoothOperator" value="igual" onclick="mostrarImagenRandom()">=</button>
         </div>
-
     </div>
 
 </body>

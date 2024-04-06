@@ -19,3 +19,14 @@ operadores.forEach(boton =>{
         pantalla.computar(boton.value);
     })
 });
+
+
+function mostrarImagenRandom() {
+    var imagenes = document.querySelectorAll('.pics img');
+    imagenes.forEach(function(img) {
+        img.style.display = 'none';
+    });
+
+    var randomIndex = Math.floor(Math.random() * imagenes.length);
+    imagenes[randomIndex].style.display = 'block';
+}

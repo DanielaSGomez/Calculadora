@@ -41,34 +41,34 @@ body{
 .intro::before {
     border-width: 30px 30px 0 0;
     border-color: #BC7FCD transparent transparent transparent;
-    left: calc(50% - 45px); /* Posición en X para la oreja izquierda */
+    left: calc(50% - 45px);
     top: 0;
-    transform: rotate(45deg); /* Rotar 45 grados */
-    transition: all 0.2s ease; /* Transición suave */
-    opacity: 0; /* Ocultar la oreja por defecto */
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+    opacity: 0;
 
 }
 
 .intro::after {
     border-width: 30px 0 0 30px;
     border-color: #BC7FCD transparent transparent transparent;
-    right: calc(50% - 45px); /* Posición en X para la oreja derecha */
+    right: calc(50% - 45px);
     top: 0;
-    transform: rotate(-45deg); /* Rotar -45 grados */
-    transition: all 0.2s ease; /* Transición suave */
-    opacity: 0; /* Ocultar la oreja por defecto */
+    transform: rotate(-45deg);
+    transition: all 0.2s ease; 
+    opacity: 0;
 }
 
 .intro:hover::before,
 .intro:hover::after {
-    opacity: 1; /* Mostrar orejas al pasar el mouse sobre el círculo */
+    opacity: 1; 
 }
 .pink_container
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .calculadora_QT
@@ -130,3 +130,26 @@ button:active
 {
     font-size: 2em;
 }
+
+.pics {
+    display: flex;
+    justify-content: center; 
+    position: relative;
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto; /
+}
+
+.pics img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+
+
